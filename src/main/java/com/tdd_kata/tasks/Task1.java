@@ -16,7 +16,7 @@ public class Task1 {
         }
         List<String> numberList = Arrays.asList(numbersWithoutSpace.split(","));
         int limit = numberList.size() == ONE ? ONE : addLimit;
-        return TaskUtil.addListOfNumbersAsString(numberList, limit);
+        return TaskUtil.addListOfNumbersAsString(numberList);
     }
 
     public void setAddLimit(int addLimit) {

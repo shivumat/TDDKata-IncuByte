@@ -1,6 +1,8 @@
 package com.tdd_kata.tasks;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class TaskUtil {
 
@@ -12,17 +14,15 @@ public class TaskUtil {
         return string.replaceAll(WHITE_SPACE, EMPTY);
     }
 
-    public static int addListOfNumbersAsString(List<String> numberList, int limit) {
-        int result = ZERO;
+    public static int addListOfNumbersAsString(List<String> numberList) {
+        List<Integer> numbers = new ArrayList<>();
         try {
-            for (int i = 0; i < limit; i++) {
-                result += Integer.parseInt(numberList.get(i));
-            }
+            numbers = numberList.stream().map(string -> Integer.parseInt(string)).collect(Collectors.toList());
         }catch (Exception e){
             System.out.println("Not correct Input.");
             return -1;
         }
-        return result;
+        return numbers.stream().reduce(0, (first, second) -> first + second);
     }
 
 }
