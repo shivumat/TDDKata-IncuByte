@@ -9,7 +9,7 @@ public class Task3Test extends TestCase {
 
         //given
         String numbers = "1,2\n3,4,5\n6,7";
-        Task2 task = new Task2();
+        Task3 task = new Task3();
 
         //when
         int result = task.Add(numbers);

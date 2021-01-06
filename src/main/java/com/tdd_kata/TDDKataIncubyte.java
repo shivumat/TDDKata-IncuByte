@@ -2,6 +2,7 @@ package com.tdd_kata;
 
 import com.tdd_kata.tasks.Task1;
 import com.tdd_kata.tasks.Task2;
+import com.tdd_kata.tasks.Task3;
 
 public class TDDKataIncubyte {
 
@@ -13,6 +14,10 @@ public class TDDKataIncubyte {
 
         Task2 task2 = new Task2();
         System.out.println(task2.Add("2,1,4,5,3"));//shall output 15
+
+        Task3 task3 = new Task3();
+        System.out.println(task3.Add("2\n1,4\n5,3"));//shall output 15
+
     }
 
 }
