@@ -10,22 +10,13 @@ public class Task1 {
     private int addLimit = 2;
 
     public int Add(String numbers){
-        int result = ZERO;
         String numbersWithoutSpace = TaskUtil.removeWhiteSpace(numbers);
         if(numbersWithoutSpace.isEmpty()){
-            return result;
+            return ZERO;
         }
         List<String> numberList = Arrays.asList(numbersWithoutSpace.split(","));
-        try {
-            int limit = numberList.size() == ONE ? ONE : addLimit;
-            for (int i = 0; i < limit; i++) {
-                result += Integer.parseInt(numberList.get(i));
-            }
-        }catch (Exception e){
-            System.out.println("Not correct Input.");
-            return -1;
-        }
-        return result;
+        int limit = numberList.size() == ONE ? ONE : addLimit;
+        return TaskUtil.addListOfNumbersAsString(numberList, limit);
     }
 
     public void setAddLimit(int addLimit) {
