@@ -8,7 +8,7 @@ public class Task8Test extends TestCase {
     public void testAdd() {
 
         //given
-        String numbers = "//[*][;]\n1*2;3*9;5";
+        String numbers = "//[*][^]\n1*2^3*9^5";
         Task8 task = new Task8();
 
         //when

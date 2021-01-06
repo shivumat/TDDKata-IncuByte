@@ -33,6 +33,9 @@ public class TDDKataIncubyte {
         Task7 task7 = new Task7();
         System.out.println(task7.Add("//[***]\n1***2***1003***9"));//shall output 12
 
+        Task8 task8 = new Task8();
+        System.out.println(task8.Add("//[*][^][;]\n1*2^1003;9"));//shall output 12
+
     }
 
 }

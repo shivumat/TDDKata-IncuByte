@@ -37,7 +37,6 @@ public class TaskUtil {
         delimiter = delimiter.replaceAll("\\+","\\\\+");
         delimiter = delimiter.replaceAll("\\?","\\\\?");
         delimiter = delimiter.replaceAll("\\^","\\\\^");
-        delimiter = delimiter.replaceAll("\\$","\\\\$");
         return delimiter;
     }
 }
