@@ -7,18 +7,21 @@ public class Task1 {
 
     public static final String WHITE_SPACE = "\\s+";
     public static final String EMPTY = "";
+    public static final int ONE = 1;
+    public static final int ZERO = 0;
     private int addLimit = 2;
 
     public int Add(String numbers){
-        int result = 0;
+        int result = ZERO;
         String numbersWithoutSpace = removeWhiteSpace(numbers);
         if(numbersWithoutSpace.isEmpty()){
-            return 0;
+            return result;
         }
         List<String> numberList = Arrays.asList(numbersWithoutSpace.split(","));
         try {
-            if(numberList.size() == 1){
-                return Integer.parseInt(numberList.get(0));
+            int limit = numberList.size() == ONE ? ONE : addLimit;
+            for (int i = 0; i < limit; i++) {
+                result += Integer.parseInt(numberList.get(i));
             }
         }catch (Exception e){
             System.out.println("Not correct Input.");
