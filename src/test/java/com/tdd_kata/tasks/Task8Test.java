@@ -9,7 +9,7 @@ public class Task8Test extends TestCase {
 
         //given
         String numbers = "//[*][;]\n1*2;3*9;5";
-        Task7 task = new Task7();
+        Task8 task = new Task8();
 
         //when
         int result = task.Add(numbers);
