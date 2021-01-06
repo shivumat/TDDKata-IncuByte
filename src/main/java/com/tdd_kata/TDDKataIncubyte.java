@@ -6,7 +6,8 @@ public class TDDKataIncubyte {
 
     public static void main(String[] args) {
         Task1 task1 = new Task1();
-        System.out.print(task1.Add(""));//shall output 0
+        System.out.println(task1.Add(""));//shall output 0
+        System.out.println(task1.Add("1"));//shall output 1
     }
 
 }

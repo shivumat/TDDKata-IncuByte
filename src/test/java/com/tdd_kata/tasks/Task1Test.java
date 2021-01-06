@@ -28,7 +28,7 @@ public class Task1Test extends TestCase {
         int result = task.Add(numbers);
 
         //then
-        Assert.assertEquals(0, result);
+        Assert.assertEquals(1, result);
     }
 
     public void testAddStringWithTwoNumber() {
