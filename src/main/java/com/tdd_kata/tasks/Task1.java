@@ -5,15 +5,13 @@ import java.util.List;
 
 public class Task1 {
 
-    public static final String WHITE_SPACE = "\\s+";
-    public static final String EMPTY = "";
     public static final int ONE = 1;
     public static final int ZERO = 0;
     private int addLimit = 2;
 
     public int Add(String numbers){
         int result = ZERO;
-        String numbersWithoutSpace = removeWhiteSpace(numbers);
+        String numbersWithoutSpace = TaskUtil.removeWhiteSpace(numbers);
         if(numbersWithoutSpace.isEmpty()){
             return result;
         }
@@ -32,9 +30,5 @@ public class Task1 {
 
     public void setAddLimit(int addLimit) {
         this.addLimit = addLimit;
-    }
-
-    private String removeWhiteSpace(String string) {
-        return string.replaceAll(WHITE_SPACE, EMPTY);
     }
 }

@@ -12,7 +12,7 @@ public class TDDKataIncubyte {
         System.out.println(task1.Add("3,4"));//shall output 7
 
         Task2 task2 = new Task2();
-        System.out.println(task2.Add("2,1,4,6,3"));//shall output 15
+        System.out.println(task2.Add("2,1,4,5,3"));//shall output 15
     }
 
 }
