@@ -37,6 +37,7 @@ public class Task4 {
     }
 
     public void setDelimiter(String delimiter) {
+        delimiter = TaskUtil.addScapeCharacterForSpecialSymbols(delimiter);
         this.delimiter = delimiter;
     }
 }

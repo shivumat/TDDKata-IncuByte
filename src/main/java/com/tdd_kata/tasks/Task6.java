@@ -10,12 +10,15 @@ public class Task6 {
 
     public int Add(String numbersAsString){
         Task5 task = new Task5();
+
         int result = 0;
+
         try {
             result = task.Add(numbersAsString);
         } catch (NegativeNumberException e) {
             System.out.println(e.getMessage());
         }
+
         if(result == -1 || result == 0){
             return result;
         }else {
