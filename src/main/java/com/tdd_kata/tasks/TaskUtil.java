@@ -28,4 +28,7 @@ public class TaskUtil {
         return numberList.stream().map(string -> Integer.parseInt(string)).collect(Collectors.toList());
     }
 
+    public static List filterListWithMaxLimit(List<Integer> numbers, int limit) {
+        return numbers.stream().filter(number -> number <= limit).collect(Collectors.toList());
+    }
 }
