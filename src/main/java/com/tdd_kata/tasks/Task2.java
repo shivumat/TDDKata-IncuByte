@@ -1,10 +1,19 @@
 package com.tdd_kata.tasks;
 
+import java.util.List;
+
 public class Task2 {
 
-    public int Add(String numbers){
+    private List<Integer> numbers;
+
+    public int Add(String numbersAsString){
         Task1 task = new Task1();
-        task.setAddLimit(numbers.split(",").length);
-        return task.Add(numbers);
+        int result = task.Add(numbersAsString);
+        numbers = task.getNumbers();
+        return result;
+    }
+
+    public List<Integer> getNumbers() {
+        return numbers;
     }
 }

@@ -12,7 +12,7 @@ public class Task5Test extends TestCase {
         Throwable exception = null;
 
         //given
-        String numbers = "1,-2\n3,4,5\n6,7";
+        String numbers = "1,-2\n3,4,5\n-6,7";
         Task5 task = new Task5();
 
         //when
@@ -22,7 +22,7 @@ public class Task5Test extends TestCase {
             exception = e;
         }
 
-        Assert.assertEquals(exception.getMessage(), "Negative Values Not Allowed");
+        Assert.assertEquals(exception.getMessage(), "Negative Values Not Allowed [-2, -6]");
         Assert.assertTrue(exception instanceof NegativeNumberException);
     }
 }

@@ -1,9 +1,11 @@
 package com.tdd_kata;
 
+import com.tdd_kata.exceptions.NegativeNumberException;
 import com.tdd_kata.tasks.Task1;
 import com.tdd_kata.tasks.Task2;
 import com.tdd_kata.tasks.Task3;
 import com.tdd_kata.tasks.Task4;
+import com.tdd_kata.tasks.Task5;
 
 public class TDDKataIncubyte {
 
@@ -21,6 +23,13 @@ public class TDDKataIncubyte {
 
         Task4 task4 = new Task4();
         System.out.println(task4.Add("//;\n1;2;3;9"));//shall output 15
+
+        Task5 task5 = new Task5();
+        try {
+            System.out.println(task5.Add("2,1,4,-5,3"));//shall throw Exception
+        } catch (NegativeNumberException e) {
+            System.out.println(e.getMessage());
+        }
 
     }
 

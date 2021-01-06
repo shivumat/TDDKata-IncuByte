@@ -1,9 +1,19 @@
 package com.tdd_kata.tasks;
 
+import java.util.List;
+
 public class Task3 {
 
-    public int Add(String numbers){
+    private List<Integer> numbers;
+
+    public int Add(String numbersAsString){
         Task2 task = new Task2();
-        return task.Add(numbers.replace("\n",","));
+        int result = task.Add(numbersAsString.replace("\n",","));
+        numbers = task.getNumbers();
+        return result;
+    }
+
+    public List<Integer> getNumbers() {
+        return numbers;
     }
 }
